@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.Pages.RegisterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+        <StackPanel Margin="0 10 0 20">
+            <TextBlock Text="Register form" Margin="20 20 0 10" FontSize="20" FontWeight="Bold" />
+            <StackPanel Style="{StaticResource StackControl}">
+                <TextBox x:Name="firstName" Header="First Name" Width="300" PlaceholderText="please enter your first name" Margin="0 0 20 0" />
+                <TextBox x:Name="lastName" Header="Last Name" Width="300" PlaceholderText="please enter your last name"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource StackControl}">
+                <PasswordBox Header="Password" Width="300" PlaceholderText="please enter your password" Margin="0 0 20 0"/>
+                <PasswordBox Header="Confirm Password" Width="300" PlaceholderText="please enter your confirm password"/>
+            </StackPanel>
+            <TextBox x:Name="Address" Header="Address" Height="100" Width="620" PlaceholderText="please enter your address" Style="{StaticResource LeftTextBox}"/>
+            <TextBox x:Name="Phone" Header="Phone" Width="300" PlaceholderText="please enter your phone" Style="{StaticResource LeftTextBox}"/>
+            <TextBox Header="Avatar" Width="620" PlaceholderText="please enter your avatar" Style="{StaticResource LeftTextBox}"/>
+            <TextBlock Text="Gender" Margin="20 10 0 0"/>
+            <StackPanel Orientation="Horizontal" Margin="20 10 0 0">
+                <RadioButton Tag="Male" Content="Male" GroupName="gender" IsChecked="True" Checked="RadioButton_Checked"/>
+                <RadioButton Tag="Female" Content="Female" GroupName="gender" Checked="RadioButton_Checked"/>
+                <RadioButton Tag="Other" Content="Other" GroupName="gender" Checked="RadioButton_Checked"/>
+            </StackPanel>
+            <TextBox x:Name="Email" Header="Email" Width="620" PlaceholderText="please enter your email" Style="{StaticResource LeftTextBox}"/>
+            <DatePicker x:Name="datePicker" Header="Birthday" Margin="20 10 0 0"/>
+            <StackPanel Style="{StaticResource StackControl}">
+                <Button Content="Submit" Width="120" Margin="0 0 10 0" Click="Button_Click"/>
+                <Button Content="Reset" Width="120"/>
+            </StackPanel>
+            <HyperlinkButton Click="HyperlinkButton_Click" Margin="20 0 0 0" HorizontalAlignment="Left" Content="If you have an account, click here login."/>
+        </StackPanel>   
+    </ScrollViewer>
+</Page>

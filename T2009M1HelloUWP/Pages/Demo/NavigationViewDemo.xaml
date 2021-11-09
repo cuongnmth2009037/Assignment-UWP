@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.Pages.Demo.NavigationViewDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP.Pages.Demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <NavigationView PaneTitle="Music I Like" SelectionChanged="NavigationView_SelectionChanged">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Tag="List Song" Icon="MusicInfo" Content="Latest Song"/>
+            <NavigationViewItem Tag="Create Song" Icon="Audio" Content="Create Song"/>
+            <NavigationViewItem Tag="My Song" Icon="ContactInfo" Content="My Song"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Tag="RecentView" Icon="Clock" Content="Recent View"/>
+            <NavigationViewItem Tag="NowPlaying" Icon="Play" Content="Now Playing"/>
+            <NavigationViewItem Tag="My Song" Icon="AlignCenter" Content="Play List"/>
+            <NavigationViewItemSeparator/>
+            <NavigationViewItem Tag="Login" Icon="Permissions" Content="Login"/>
+            <NavigationViewItem Tag="Register" Icon="AddFriend" Content="Register"/>
+            <NavigationViewItem Tag="Profile" Icon="Contact" Content="Profile"/>
+        </NavigationView.MenuItems>
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox QueryIcon="Find" AutomationProperties.Name="Search"/>
+        </NavigationView.AutoSuggestBox>
+        <Frame x:Name="contentFrame"/>
+    </NavigationView>
+</Page>

@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.Pages.Demo.SplistViewDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP.Pages.Demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style x:Key="MenuItem" TargetType="StackPanel">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="Margin" Value="0 0 0 10"/>
+        </Style>
+        <Style x:Key="MenuIcon" TargetType="SymbolIcon">
+            <Setter Property="Margin" Value="0 0 20 0"/>
+        </Style>
+    </Page.Resources>
+    <SplitView x:Name="MySplistView" DisplayMode="CompactOverlay" IsPaneOpen="True">
+        <SplitView.Pane>
+            <StackPanel>
+                <SymbolIcon Margin="10 10 0 0" Symbol="GlobalNavigationButton" Tapped="SymbolIcon_Tapped" HorizontalAlignment="Left"/>
+                <StackPanel Margin="0 20 0 0">
+                    <StackPanel Tag="Register" Tapped="Click_Menu" Style="{StaticResource MenuItem}">
+                        <SymbolIcon Symbol="AddFriend" Style="{StaticResource MenuIcon}"/>
+                        <TextBlock Text="Register"/>
+                    </StackPanel>
+                    <StackPanel Tag="Login" Tapped="Click_Menu" Style="{StaticResource MenuItem}">
+                        <SymbolIcon Symbol="ContactInfo" Style="{StaticResource MenuIcon}"/>
+                        <TextBlock Text="Login"/>
+                    </StackPanel>
+                    <StackPanel Tag="ListSong" Tapped="Click_Menu" Style="{StaticResource MenuItem}">
+                        <SymbolIcon Symbol="MusicInfo" Style="{StaticResource MenuIcon}"/>
+                        <TextBlock Text="List Song"/>
+                    </StackPanel>
+                    <StackPanel Tag="CreateSong" Tapped="Click_Menu" Style="{StaticResource MenuItem}">
+                        <SymbolIcon Symbol="Audio" Style="{StaticResource MenuIcon}"/>
+                        <TextBlock Text="Create Song"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Frame x:Name="MyContent"/>
+        </SplitView.Content>
+    </SplitView>
+</Page>

@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.Pages.Demo.MenuBarDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP.Pages.Demo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel>
+        <MenuBar>
+            <MenuBarItem Title="File">
+                <MenuFlyoutItem Tag="new" Text="New" Click="MenuFlyoutItem_Click">
+                    <MenuFlyoutItem.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control" Key="N"/>
+                    </MenuFlyoutItem.KeyboardAccelerators>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Tag="open" Text="Open" Click="MenuFlyoutItem_Click">
+                    <MenuFlyoutItem.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control" Key="O"/>
+                    </MenuFlyoutItem.KeyboardAccelerators>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Tag="save" Text="Save" Click="MenuFlyoutItem_Click">
+                    <MenuFlyoutItem.KeyboardAccelerators>
+                        <KeyboardAccelerator Modifiers="Control" Key="S"/>
+                    </MenuFlyoutItem.KeyboardAccelerators>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Tag="exit" Text="Exit" Click="MenuFlyoutItem_Click"/>
+            </MenuBarItem>
+            <MenuBarItem Title="Edit">
+                <MenuFlyoutItem Text="New"/>
+                <MenuFlyoutItem Text="Open"/>
+            </MenuBarItem>
+        </MenuBar>
+        <Frame Margin="10" x:Name="MyMainContent"/>
+    </StackPanel>
+</Page>

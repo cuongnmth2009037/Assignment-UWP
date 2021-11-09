@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBox HorizontalAlignment="Center" Margin="0,10,0,0" Text="Register" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,66,0,0" Text="Rollnumber" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,59,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your rollnumber"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,102,0,0" Text="Fullname" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,97,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your fullname"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,138,0,0" Text="Avatar" TextWrapping="Wrap" VerticalAlignment="Top" Width="54"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,138,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your avatar"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,188,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,181,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your email"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,236,0,0" Text="Birthday" TextWrapping="Wrap" VerticalAlignment="Top" Width="63"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,229,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your birthday"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,277,0,0" Text="Phone" TextWrapping="Wrap" VerticalAlignment="Top" Width="48"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,270,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your phone"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,326,0,0" Text="Address" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,319,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your address"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,369,0,0" Text="Gender" TextWrapping="Wrap" VerticalAlignment="Top" Width="51"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,362,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your gender"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,414,0,0" Text="CreatedAt" TextWrapping="Wrap" VerticalAlignment="Top" Width="65"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,414,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your createdAt"/>
+        <TextBlock HorizontalAlignment="Left" Margin="52,466,0,0" Text="UpdatedAt" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,459,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="TextBox_TextChanged" Height="33" Width="211" PlaceholderText="please enter your updatedAt"/>
+        <TextBlock HorizontalAlignment="Left" Margin="51,513,0,0" Text="Status" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Content="Submit" Margin="126,565,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="155,506,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <Button Content="Reset" Margin="216,565,0,0" VerticalAlignment="Top" Width="64"/>
+
+    </Grid>
+</Page>
