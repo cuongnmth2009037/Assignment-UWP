@@ -8,16 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <ScrollViewer>
-        <StackPanel Margin="0 10 0 20">
-            <TextBlock Text="Login form" Margin="20 20 0 10" FontSize="20" FontWeight="Bold" />
-            <TextBox Header="Email" Width="300" PlaceholderText="please enter your email" Style="{StaticResource LeftTextBox}"/>
-            <PasswordBox Header="Password" Width="300" PlaceholderText="please enter your password" Style="{StaticResource LeftTextBox}"/>
-            <DatePicker Header="Birthday" Style="{StaticResource LeftTextBox}"/>
-            <StackPanel Orientation="Horizontal" Margin="20 20 0 0">
-                <Button Content="Submit" Width="120" Margin="0 0 10 0"/>
-                <Button Content="Reset" Width="120"/>
+        <StackPanel Margin="0 10 0 20" Background="AliceBlue">
+            <TextBlock Text="Login" Margin="0 40 0 0" FontSize="30" FontWeight="Bold" HorizontalTextAlignment="Center" Foreground="BlueViolet"/>
+            <TextBox x:Name="Email" Margin="0 20 0 0" Header="Email" Width="300" PlaceholderText="please enter your email" HorizontalAlignment="Center"/>
+            <PasswordBox x:Name="Password" Margin="0 20 0 0" Header="Password" Width="300" PlaceholderText="please enter your password" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" Margin="0 20 0 0" HorizontalAlignment="Center">
+                <Button Content="Submit" Width="120" Margin="0 5 10 0" Click="Button_Click" Foreground="Purple"/>
+                <Button Content="Reset" Width="120" Margin="0 5 0 0" Foreground="Purple"/>
             </StackPanel>
-            <HyperlinkButton Click="HyperlinkButton_Click" Margin="20 0 0 0" HorizontalAlignment="Left" Content="If you don't have an account, click here register."/>
+            <HyperlinkButton Click="HyperlinkButton_Click" Margin="20 10 0 0" HorizontalAlignment="Center" Content="If you don't have an account, click here register." Foreground="BlueViolet"/>
         </StackPanel>
     </ScrollViewer>
 </Page>

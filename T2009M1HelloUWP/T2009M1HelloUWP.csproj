@@ -119,23 +119,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Credential.cs" />
+    <Compile Include="Entities\LoginInformation.cs" />
+    <Compile Include="Entities\Song.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\IStudentModel.cs" />
-    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Pages\CreateSong.xaml.cs">
       <DependentUpon>CreateSong.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Demo\MenuBarDemo.xaml.cs">
-      <DependentUpon>MenuBarDemo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\Demo\NavigationViewDemo.xaml.cs">
       <DependentUpon>NavigationViewDemo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Demo\SplistViewDemo.xaml.cs">
-      <DependentUpon>SplistViewDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ListSong.xaml.cs">
       <DependentUpon>ListSong.xaml</DependentUpon>
@@ -143,14 +138,19 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MySong.xaml.cs">
+      <DependentUpon>MySong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ProfilePage.xaml.cs">
+      <DependentUpon>ProfilePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\TapCode.xaml.cs">
-      <DependentUpon>TapCode.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils\ConnectionHelper.cs" />
+    <Compile Include="Service\AccountService.cs" />
+    <Compile Include="Service\FileService.cs" />
+    <Compile Include="Service\SongService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -158,6 +158,38 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\logo1_loading.scale-100.png" />
+    <Content Include="Assets\logo1_loading.scale-125.png" />
+    <Content Include="Assets\logo1_loading.scale-150.png" />
+    <Content Include="Assets\logo1_loading.scale-200.png" />
+    <Content Include="Assets\logo1_loading.scale-400.png" />
+    <Content Include="Assets\logo2_loading.scale-100.png" />
+    <Content Include="Assets\logo2_loading.scale-125.png" />
+    <Content Include="Assets\logo2_loading.scale-150.png" />
+    <Content Include="Assets\logo2_loading.scale-200.png" />
+    <Content Include="Assets\logo2_loading.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -180,15 +212,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Demo\MenuBarDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Demo\NavigationViewDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Demo\SplistViewDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,21 +224,34 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\RegisterPage.xaml">
+    <Page Include="Pages\MySong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\TapCode.xaml">
+    <Page Include="Pages\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet">
+      <Version>1.15.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Data.Sqlite">
+      <Version>5.0.12</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.12</Version>
     </PackageReference>
     <PackageReference Include="MySql.Data">
       <Version>8.0.27</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup />

@@ -18,10 +18,9 @@
             <Setter Property="BorderBrush" >
                 <Setter.Value>
                     <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
-                        <GradientStop Color="Yellow" Offset="0.0" />
-                        <GradientStop Color="Red" Offset="0.25" />
-                        <GradientStop Color="Blue" Offset="0.75" />
-                        <GradientStop Color="LimeGreen" Offset="1.0" />
+                        <GradientStop Color="Pink" Offset="0.0" />
+                        <GradientStop Color="Pink" Offset="0.25" />
+                        <GradientStop Color="Blue" Offset="1.0" />
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>

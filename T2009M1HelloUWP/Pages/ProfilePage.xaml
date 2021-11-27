@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="T2009M1HelloUWP.Pages.ProfilePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:T2009M1HelloUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <StackPanel Margin="0 10 0 20" Background="AliceBlue" Height="600">
+        <StackPanel Style="{StaticResource StackControl}">
+            <Border Margin="0 10 20 0" Width="150" Height="180" BorderBrush="Purple" BorderThickness="4" CornerRadius="9">
+                <Border.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Square150x150Logo.scale-200.png" x:Name="Avatar"/>
+                </Border.Background>
+            </Border>
+            <Border Margin="30 40 20 0" Width="250" Height="300" BorderBrush="Purple" BorderThickness="4" CornerRadius="9">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="FullName :" Margin="20 35 0 0" Foreground="Blue"/>
+                        <TextBlock x:Name="FullName" Margin="10 35 0 0" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Phone :" Margin="20 30 0 0" Foreground="Blue"/>
+                        <TextBlock x:Name="Phone" Margin="10 30 0 0" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Address :" Margin="20 30 0 0" Foreground="Blue"/>
+                        <TextBlock x:Name="Address" Margin="10 30 0 0" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Birthday :" Margin="20 30 0 0" Foreground="Blue"/>
+                        <TextBlock x:Name="Birthday" Margin="10 30 0 0" Foreground="DeepPink"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Email :" Margin="20 30 0 0" Foreground="Blue"/>
+                        <TextBlock x:Name="Email" Margin="10 30 0 0" Foreground="DeepPink"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </StackPanel>
+    </StackPanel>
+</Page>
